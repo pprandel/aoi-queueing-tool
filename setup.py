@@ -29,9 +29,6 @@ ext_modules = [
     for path in extension_paths
 ]
 
-with open('README.rst', 'r') as a_file:
-    long_description = a_file.read()
-
 with open('VERSION', 'r') as a_file:
     version = a_file.read().strip()
 
@@ -84,20 +81,20 @@ if python_version[0] == 2:
     tests_require.append('mock')
 
 setup(
-    author='Daniel Jordon',
-    author_email='dan.jordon@gmail.com',
+    author='Paulo Prandel',
+    author_email='pauloprandel@hotmail.com',
     cmdclass=cmdclass,
-    description='Queueing network simulator',
+    description='Queueing network simulator (fork)',
     ext_modules=ext_modules,
     classifiers=classifiers,
     install_requires=install_requires,
     keywords=keywords,
-    long_description=long_description,
+    long_description='Queueing network simulator (fork)',
     license='MIT',
-    name='queueing-tool',
+    name='aoi-queueing-tool',
     packages=packages,
     tests_require=tests_require,
     test_suite='nose.collector',
-    url='https://github.com/djordon/queueing-tool',
+    url='https://github.com/pprandel/aoi-queueing-tool',
     version=version
 )
